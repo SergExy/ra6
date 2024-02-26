@@ -1,0 +1,97 @@
+@import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0";
+
+.crud {
+  font-family: sans-serif;
+  color: #353535;
+
+  header {
+    display: flex;
+    align-items: center;
+
+    .iconBtn,
+    .iconBtn:hover {
+      color: green;
+    }
+  }
+
+  h1 {
+    margin-right: 20px;
+  }
+
+  .iconBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0px;
+    color: #353535;
+    background: #ffffff;
+    border: 2px solid #353535;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: .4s color, .4s box-shadow;
+
+    &:hover {
+      color: #121212;
+      box-shadow: 0 0 2px 8px rgba($color: #000000, $alpha: .08);
+    }
+
+    .material-symbols-outlined {
+      font-size: 30px;
+    }
+  }
+
+  .notes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    gap: 50px;
+
+    &__item {
+      position: relative;
+      width: min(100%, 300px);
+      padding: 20px;
+      border: 2px solid #353535;
+    }
+
+    &__btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(50%, -50%);
+
+      .iconBtn {
+        color: red;
+      }
+    }
+
+    &__new {
+      margin-top: 20px;
+      position: relative;
+      width: min(100%, 600px);
+      border: 2px solid #353535;
+
+      textarea {
+        width: 100%;
+        height: 200px;
+        padding: 10px;
+        padding-right: 50px;
+        border: none;
+        font-size: 22px;
+        resize: none;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .iconBtn {
+        position: absolute;
+        right: 20px;
+        bottom: 10px;
+      }
+    }
+  }
+
+}
